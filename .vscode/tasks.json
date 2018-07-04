@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build switch homebrew (make)",
+            "type": "shell",
+            "command": "make",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "run switch homebrew (yuzu)",
+            "type": "shell",
+            "command": "D:/Shared/Users/Chris/Switch/apps/yuzu/nightly-mingw/yuzu-cmd.exe matrix.nro",
+            "problemMatcher": [],
+        }
+    ]
+}
