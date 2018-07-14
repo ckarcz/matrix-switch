@@ -30,11 +30,31 @@ int main(int argc, char **argv)
 	// Create bg texture:
 	SDL_Surface* bg_surface = IMG_Load("romfs:/resources/images/main.png");			// Read image as surface
 	SDL_Texture* bg_texture = SDL_CreateTextureFromSurface(renderer, bg_surface);	// Create texture from surface
-	
+
+	// Create font:
+	TTF_Font* font = TTF_OpenFont("romfs:/resources/fonts/small_font.ttf", 24);
+	SDL_Color color = {0, 0, 0}; 
+
+	// Clear renderer:
+	SDL_RenderClear(renderer);
+
+	// Copy bg texture to renderer:
+	SDL_RenderCopy(renderer, bg_texture, NULL, NULL);
+
+	// Create text texture
+	SDL_Surface* txt_surface = TTF_RenderText_Solid(font, "test", color);
+	SDL_Texture* txt_texture = SDL_CreateTextureFromSurface(renderer, txt_surface);
+	SDL_Rect txt_rect;
+	txt_rect.x = 10; 
+	txt_rect.y = 10;
+	txt_rect.w = txt_surface->w;
+	txt_rect.h = txt_surface->h;
+
+	// Copy text texture to renderer:
+	SDL_RenderCopy(renderer, txt_texture, NULL, &txt_rect);
+
 	// Render
-	SDL_RenderClear(renderer);	
-	SDL_RenderCopy(renderer, bg_texture, NULL, NULL);	
-	SDL_RenderPresent(renderer);
+	SDL_RenderPresent(renderer);						// Render renderer
 
 	// Game loop:
 	while (appletMainLoop())
