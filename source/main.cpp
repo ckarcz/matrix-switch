@@ -30,14 +30,11 @@ int main(int argc, char **argv)
 	// Create bg texture:
 	SDL_Surface* bg_surface = IMG_Load("romfs:/resources/images/main.png");			// Read image as surface
 	SDL_Texture* bg_texture = SDL_CreateTextureFromSurface(renderer, bg_surface);	// Create texture from surface
-	// Clear renderer:
-	SDL_RenderClear(renderer);							// Clear renderer
-	
-	// Copy bg texture to renderer:
-	SDL_RenderCopy(renderer, bg_texture, NULL, NULL); 	// Copy texture to renderer
 	
 	// Render
-	SDL_RenderPresent(renderer);						// Render renderer
+	SDL_RenderClear(renderer);	
+	SDL_RenderCopy(renderer, bg_texture, NULL, NULL);	
+	SDL_RenderPresent(renderer);
 
 	// Game loop:
 	while (appletMainLoop())
