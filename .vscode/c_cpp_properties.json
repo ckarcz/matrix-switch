@@ -52,7 +52,8 @@
                 "C:/Program Files (x86)/Windows Kits/10/Include/10.0.16299.0/shared",
                 "C:/Program Files (x86)/Windows Kits/10/Include/10.0.16299.0/winrt",
                 "C:/devkitPro/libnx/include",
-                "C:/devkitPro/devkitA64/aarch64-none-elf/include"
+                "C:/devkitPro/devkitA64/aarch64-none-elf/include",
+                "C:/devkitPro/portlibs/switch/include"
             ],
             "defines": [
                 "_DEBUG",
@@ -76,5 +77,5 @@
             "cppStandard": "c++17"
         }
     ],
-    "version": 3
+    "version": 4
 }

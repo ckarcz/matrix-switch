@@ -14,7 +14,7 @@
         {
             "label": "run switch homebrew (yuzu)",
             "type": "shell",
-            "command": "D:/Shared/Users/Chris/Switch/apps/yuzu/nightly-mingw/yuzu-cmd.exe matrix.nro",
+            "command": "D:/Shared/Users/Chris/Switch/apps/yuzu/nightly-mingw/yuzu-cmd.exe matrix-switch.nro",
             "problemMatcher": [],
         }
     ]
